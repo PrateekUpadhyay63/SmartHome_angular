@@ -1,0 +1,99 @@
+<ion-header no-border class="header-dark">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" icon="arrow-round-back" mode="md" color="softlight"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Activity</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!--chart in a ion-card element-->
+  <ion-card class="power-chart ion-no-margin ion-no-padding">
+
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="panel" margin-start margin-end margin-bottom>
+        <p style="margin-bottom: 0px !important;">RECENTLY ACCESSED</p>
+        <ion-row style="background-color: rgb(196, 193, 193); height: 10%; border: 1px solid black;">
+          <ion-col class="ion-align-self-center">
+            <ion-row>
+              Time
+            </ion-row>
+          </ion-col>
+          <ion-col class="ion-align-self-center">
+            <ion-row>
+              User
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let item of gallery" style="border: 1px solid black;">
+          <ion-col class="ion-align-self-center" style="border: 1px solid black;">
+            <ion-row>
+              {{item.id}}
+            </ion-row>
+          </ion-col>
+          <ion-col class="ion-align-self-center" style="border: 1px solid black;">
+            <ion-row>
+              {{item.name}}
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col class="panel" margin-start margin-end margin-bottom>
+        <p style="margin-bottom: 0px !important;">USERS</p>
+        <ion-row>
+          <ion-col class="ion-align-self-center" style="border: 1px solid black;">
+            <ion-row>
+              User
+            </ion-row>
+          </ion-col>
+          <ion-col class="ion-align-self-center" style="border: 1px solid black;">
+            <ion-row>
+              Delete
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let item of gallery">
+          <ion-col class="ion-align-self-center">
+            <ion-row>
+              {{item.id}}
+            </ion-row>
+          </ion-col>
+          <ion-col class="ion-align-self-center">
+            <ion-row>
+              <ion-button (click)="removeUser(item)">
+                Del
+              </ion-button>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-button (click)="addUser()">
+            Add User
+          </ion-button>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--chart in grid element-->
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col class="panel" margin-start margin-end margin-bottom>
+        <p style="margin-bottom: 0px !important;">Temperature</p>
+        <div>
+          <canvas #linesChart2></canvas>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <!--chart with image background-->
+  <!-- <div class="chart-lines">
+    <canvas #linesChart></canvas>
+  </div> -->
+
+</ion-content>

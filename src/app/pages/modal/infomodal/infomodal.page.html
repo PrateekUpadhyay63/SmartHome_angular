@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <h4 style="text-decoration: underline;">Power Projection Bill</h4>
+        <h3>Your power bill projection is calculated as follows:</h3>
+        <ul>
+          <li>
+            <h3>
+              Net production/consumption in kWh is summer for every 30 minute window.
+            </h3>
+          </li>
+          <li>
+            <h3>
+              A daily bill is calculated as the sum of eact 30 minute window at the applicable consumption or export rate (depending on if the net kWh is that window is consumed or exported).
+            </h3>
+          </li>
+          <li>
+            <h3>
+              The average of each day's net bill is calculated, then that average extrapolated accross the bill period.
+            </h3>
+          </li>
+          <li>
+            <h3>
+              Note, for the first 7 days into each new billing period, up to 7 days bills from the previous billing period are included in the extrapolation to reduce projection volatility.
+            </h3>
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="closeModal()">OK</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

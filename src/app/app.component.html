@@ -1,0 +1,26 @@
+<ion-app>
+    <ion-menu type="overlay" swipeGesture="true" side="start">
+      <ion-content>
+        <div id="lateralMenu">
+          <div id="header-over">
+            <img id="avatar" src="/assets/img/user3.jpg" alt="Smiley face">
+            <ion-label>
+              <h2>Erika Cersei</h2>
+              <p>@erikacersei</p>
+            </ion-label>
+          </div>
+        </div>
+        <ion-list id="menu-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item lines="none" [routerDirection]="'root'" [routerLink]="[p.url]" mode="md">
+              <ion-icon color="primary" slot="start" [name]="p.icon"></ion-icon>
+              <ion-label color="dark">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+</ion-app>

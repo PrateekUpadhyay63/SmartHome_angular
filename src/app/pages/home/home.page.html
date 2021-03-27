@@ -1,0 +1,174 @@
+<ion-content fullscreen>
+	<ion-grid
+		style="
+			height: 100%;
+			background: white !important;
+			display: flex;
+			flex-flow: column;
+		"
+	>
+		<!--HEADER-->
+		<ion-row id="head" style="height: 10%; background-color: white">
+			<ion-col
+				style="
+					text-align: left;
+					background-color: white;
+					padding-left: 24px !important;
+					background: white;
+				"
+				class="ion-align-self-center"
+				size="8"
+			>
+				<!-- <p>March 17, 2020</p> -->
+				<!-- <h2>Welcome Home</h2> -->
+			</ion-col>
+			<ion-col
+				style="border-bottom-right-radius: 80px; text-align: center"
+				class="ion-align-self-center"
+				size="4"
+			>
+				<ion-menu-button mode="ios" autoHide="false"></ion-menu-button>
+			</ion-col>
+		</ion-row>
+
+		<!--BODY-->
+		<ion-row style="height: 90%">
+			<!--LEFT COL-->
+			<ion-col
+				size="12"
+				style="
+					background: linear-gradient(
+						var(--ion-color-softlight),
+						white
+					) !important;
+					border-top-left-radius: 80px;
+				"
+			>
+				<ion-grid
+					style="
+						background: transparent !important;
+						height: 100%;
+						display: flex;
+						flex-flow: column;
+					"
+				>
+					<ion-row style="flex-grow: 1; background: transparent">
+						<ion-col class="ion-text-center" style="background: transparent">
+							<ion-slides
+								autpplay="1000"
+								loop="true"
+								speed="1000"
+								class="scrolling-wrapper"
+                >
+								<!-- autpplay="5000" loop="true" speed="1000"  -->
+								<!-- [options]="slideOptsOne"  -->
+								<ion-slide class="card" *ngFor="let item of gallery">
+									<div
+										[ngStyle]="{'background-image': 'url(' + item.image + ')'}"
+										class="image-container"
+                    >
+										<!-- <div class="titles">
+                      <h2>{{item.name}}</h2>
+                      <div class="temperature" class="ion-text-left">
+                        {{item.tmp}} ºC
+                      </div>
+                    </div> -->
+                  </div>
+								</ion-slide>
+							</ion-slides>
+						</ion-col>
+					</ion-row>
+					<!-- <ion-row style="height: 20%;" *ngFor="let room of rooms">
+            <ion-col class="ion-align-self-center ion-text-center" style="background-color: #E8F4FF; *ngFor="let room of rooms"
+              routerLink="{{room.link}}" routerDirection="root">
+              <ion-icon size="large" src="{{'/assets/img/'+room.image}}"></ion-icon>
+              <p>{{room.name}}</p>
+            </ion-col>
+          </ion-row> -->
+					<ion-row
+						style="min-height: 15%"
+						routerLink="/chart"
+						routerDirection="root"
+					>
+						<ion-col
+							class="ion-text-center"
+							style="
+								border-top-left-radius: 80px;
+								border-bottom-left-radius: 80px;
+								background-image: linear-gradient(to right, #ebf4fd, white);
+							"
+						>
+							<ion-grid id="statistics" style="padding-top: 20px; height: 100%">
+								<ion-row style="height: 50%">
+									<ion-col class="ion-align-self-center">
+										<h2>POWER PROJECTION</h2>
+										<ion-row>
+											<ion-col class="ion-align-self-center">
+												<h3><b>4.21kW</b></h3>
+											</ion-col>
+										</ion-row>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</ion-col>
+					</ion-row>
+					<ion-row
+						style="min-height: 30%"
+						routerLink="/chart"
+						routerDirection="root"
+					>
+						<ion-col
+							class="ion-text-center"
+							style="
+								border-top-left-radius: 80px;
+								background-image: linear-gradient(to right, #ebf4fd, white);
+							"
+						>
+							<ion-grid id="statistics" style="padding-top: 20px; height: 100%">
+								<ion-row style="height: 50%">
+									<ion-col class="ion-align-self-center">
+										<h2>BUILDING POWER</h2>
+										<ion-row>
+											<ion-col class="ion-align-self-center">
+												<p>Production (solar)</p>
+												<h3><b>4.21kW</b></h3>
+											</ion-col>
+											<ion-col class="ion-align-self-center">
+												<p>Consumption (usage)</p>
+												<h3><b>7.31kW</b></h3>
+											</ion-col>
+										</ion-row>
+										<ion-row>
+											<ion-col class="ion-align-self-center">
+												<p>Net</p>
+												<h3><b>3.10kW consumption</b></h3>
+											</ion-col>
+										</ion-row>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+
+			<!--RIGHT COL-->
+			<!-- <ion-col id="tabs" size="4" style="background-color: #E8F4FF;">
+        <ion-grid style="background-color: #E8F4FF; height: 100%;"> -->
+			<!-- <ion-row style="height: 20%;" *ngFor="let room of rooms">
+            <ion-col class="ion-align-self-center ion-text-center" style="background-color: #E8F4FF;"
+              routerLink="{{room.link}}" routerDirection="root">
+              <ion-icon size="large" src="{{'/assets/img/'+room.image}}"></ion-icon>
+              <p>{{room.name}}</p>
+            </ion-col>
+          </ion-row> -->
+			<!-- <ion-row style="height: 20%;">
+            <ion-col class="ion-align-self-center ion-text-center" style="background-color: #E8F4FF;">
+              <ion-toggle (click)="logout()" color="primary" mode="ios"></ion-toggle>
+            </ion-col>
+          </ion-row> -->
+			<!-- </ion-grid>
+      </ion-col> -->
+		</ion-row>
+	</ion-grid>
+</ion-content>

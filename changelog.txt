@@ -1,0 +1,8 @@
+Title: SmartHome
+Author: ionic4themes
+Contact: info@ionic4themes.com
+---------
+
+## 1.0.0 - 2020-03-06
+### Added
+- Initial release

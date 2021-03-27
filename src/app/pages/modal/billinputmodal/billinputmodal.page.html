@@ -1,0 +1,53 @@
+<ion-content>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-align-self-center">
+              <h2>Power Bill Projection Inputs</h2>
+              <ion-row class="ion-padding-top">
+                <ion-col class="ion-align-self-center">
+                  <h3>Input</h3>
+                </ion-col>
+                <ion-col class="ion-align-self-center">
+                  <h3>Value</h3>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="ion-align-self-center">
+                  <p>Bill start date</p>
+                </ion-col>
+                <ion-col class="ion-align-self-center">
+                  <h3><b>1-Jan-21</b><a (click)="selectDate()">(click for date selection)</a></h3>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="ion-align-self-center">
+                  <p>Bill frequency</p>
+                </ion-col>
+                <ion-col class="ion-align-self-center">
+                  <h3><b>Monthly</b><a (click)="selectFrequency()">(click for dropdown choices)</a></h3>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="ion-align-self-center">
+                  <p>Consumption_rate ($/kWh)</p>
+                </ion-col>
+                <ion-col class="ion-align-self-center">
+                  <h3><b>0.325</b><a (click)="setConsumptionRate()">(click for keyboard)</a></h3>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="ion-align-self-center">
+                  <p>Solar export rate ($/kWh)</p>
+                </ion-col>
+                <ion-col class="ion-align-self-center">
+                  <h3><b>0.102</b><a (click)="setExportRate()">(click for keyboard)</a></h3>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+</ion-content>
